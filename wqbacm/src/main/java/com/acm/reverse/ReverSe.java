@@ -10,6 +10,7 @@ public class ReverSe {
     public void stringreverse() {
         String s = "123456789";
         System.out.println(reserve1(s));
+        System.out.println(resverse2(s));
     }
 
     public String reserve1(String s) {
@@ -20,5 +21,9 @@ public class ReverSe {
         String left = s.substring(0, length / 2);
         String right = s.substring(length / 2, length);
         return reserve1(right) + reserve1(left);
+    }
+
+    public String resverse2(String s){
+        return new StringBuilder(s).reverse().toString();
     }
 }
